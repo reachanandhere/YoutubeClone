@@ -1,8 +1,17 @@
 import React from 'react'
+import Button from './Button'
+import { BUTTON_LIST } from '../utils/constants'
 
 const ButtonList = () => {
   return (
-    <div>ButtonList</div>
+    <section className='flex'>
+      {
+        BUTTON_LIST.map(b=>{
+          return  <Button val={b} />
+        })
+      }
+     
+    </section>
   )
 }
 

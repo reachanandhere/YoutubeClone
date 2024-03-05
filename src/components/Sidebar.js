@@ -3,7 +3,7 @@ import { SIDEBAR_EXPLORE, SIDEBAR_YOUTUBE } from "../utils/constants";
 
 const Sidebar = () => {
   return (
-    <section className="p-5 shadow-lg w-60">
+    <section className="p-5 shadow-lg w-2/12">
       <h2 className="flex py-2">
         <span>
           <img
