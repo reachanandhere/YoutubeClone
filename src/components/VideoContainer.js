@@ -14,7 +14,7 @@ const VideoContainer = () => {
     getVideos()
   },[])
   return (
-    <section className='flex'>
+    <section className='flex flex-wrap'>
       {
         videos.map(video=>{
           return <VideoCard key={video.id} info={video} />
