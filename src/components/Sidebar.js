@@ -1,18 +1,22 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 import { SIDEBAR_EXPLORE, SIDEBAR_YOUTUBE } from "../utils/constants";
 
 const Sidebar = () => {
   return (
     <section className="p-5 shadow-lg w-2/12">
-      <h2 className="flex py-2">
-        <span>
-          <img
-            className="h-6 px-1"
-            src="https://cdn-icons-png.flaticon.com/512/25/25694.png"
-          />
-        </span>{" "}
-        Home
-      </h2>
+      <Link to='/'>
+        <h2 className="flex py-2">
+          <span>
+            <img
+              className="h-6 px-1"
+              src="https://cdn-icons-png.flaticon.com/512/25/25694.png"
+            />
+          </span>{" "}
+          Home
+        </h2>
+      </Link>
+
       <h2 className="flex py-2">
         <span>
           <img

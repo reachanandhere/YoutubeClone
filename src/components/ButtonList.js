@@ -7,7 +7,7 @@ const ButtonList = () => {
     <section className='flex'>
       {
         BUTTON_LIST.map(b=>{
-          return  <Button val={b} />
+          return  <Button key={b} val={b} />
         })
       }
      
