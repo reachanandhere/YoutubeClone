@@ -30,9 +30,9 @@ const Sidebar = () => {
       <h1 className="font-bold mt-2">Explore</h1>
       <ul>
         {SIDEBAR_EXPLORE.map((val) => {
-          console.log(val[0]);
+        
           return (
-            <li className="flex py-2">
+            <li key={val} className="flex py-2">
               <span>
                 <img className="h-6 px-1" src={val[1]} />
               </span>
@@ -45,9 +45,9 @@ const Sidebar = () => {
       <h1 className="font-bold mt-4">More from Youtube</h1>
       <ul>
         {SIDEBAR_YOUTUBE.map((val) => {
-          console.log(val[0]);
+         
           return (
-            <li className="flex py-2">
+            <li key={val} className="flex py-2">
               <span>
                 <img className="h-6 px-1" src={val[1]} />
               </span>

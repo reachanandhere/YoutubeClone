@@ -91,7 +91,7 @@ const Header = () => {
               <ul>
                 {searchResults.map((result) => {
                   return (
-                    <li className="cursor-pointer hover:bg-gray-200 py-1 pl-2">
+                    <li key={result} className="cursor-pointer hover:bg-gray-200 py-1 pl-2">
                       {result}
                     </li>
                   );
