@@ -1,0 +1,71 @@
+import React from "react";
+import Comment from "./Comment";
+
+const commentsData = [
+  {
+    name: "Anand Verma",
+    text: "This is the comment by Anand verma",
+    replies: [],
+  },
+  {
+    name: "Anand Verma",
+    text: "This is the comment by Anand verma",
+    replies: [],
+  },
+  {
+    name: "Anand Verma",
+    text: "This is the comment by Anand verma",
+    replies: [],
+  },
+  {
+    name: "Anand Verma",
+    text: "This is the comment by Anand verma",
+    replies: [
+      {
+        name: "Anand Verma",
+        text: "This is the comment by Anand verma",
+        replies: [
+          {
+            name: "Anand Verma",
+            text: "This is the comment by Anand verma",
+            replies: [
+              {
+                name: "Anand Verma",
+                text: "This is the comment by Anand verma",
+                replies: [
+                  {
+                    name: "Anand Verma",
+                    text: "This is the comment by Anand verma",
+                    replies: [],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+];
+
+const CommentsList = ({ comments }) => {
+  return comments.map((comment, index) => {
+    return <div>
+      <Comment key={index} data={comment} />
+      <div className="pl-5 border border-l-black ml-5">
+            <CommentsList comments={comment.replies} />
+      </div>
+    </div>;
+  });
+};
+
+const Comments = () => {
+  return (
+    <div className="my-5 w-11/12 shadow-xl">
+      <h1 className="text-2xl font-bold">Comments</h1>
+      <CommentsList comments={commentsData} />
+    </div>
+  );
+};
+
+export default Comments;

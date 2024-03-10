@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {
   HAMBURGER,
   USER_ICON,
@@ -7,6 +7,7 @@ import {
   YOUTUBE_SEARCH_API,
 } from "../utils/constants";
 import { togglemenu } from "../utils/appSlice";
+import { cacheResults } from "../utils/searchSlice";
 
 const Header = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -16,9 +17,12 @@ const Header = () => {
     dispatch(togglemenu());
   };
 
+  const searchCache = useSelector(store=>store.search)
+
   useEffect(() => {
     const timer = setTimeout(() => {
-      getSearchSuggestion();
+      if(searchCache[searchQuery]) setSearchResults(searchCache[searchQuery])
+      else getSearchSuggestion();
     }, 200);
     return () => {
       clearTimeout(timer);
@@ -29,6 +33,7 @@ const Header = () => {
     const data = await fetch(YOUTUBE_SEARCH_API + searchQuery);
     const json = await data.json();
     setSearchResults(json[1]);
+    dispatch(cacheResults({[searchQuery] : json[1]}))
   };
 
   const blurHandlerLeave = () => {
