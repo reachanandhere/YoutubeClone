@@ -70,11 +70,16 @@ export const YOUTUBE_OPTION_LIST = [
   ["Help",'https://cdn0.iconfinder.com/data/icons/cosmo-symbols/40/help_1-512.png'],
   ["Send Feedback",'https://icons.veryicon.com/png/o/internet--web/prejudice/feedback-7.png'],
 ];
-const YOUTUBE_API_KEY = "AIzaSyCf_mdLfYW1Rb4DbqQdlOBMot0_Cy5Il5k";
+export const YOUTUBE_API_KEY = "AIzaSyCf_mdLfYW1Rb4DbqQdlOBMot0_Cy5Il5k";
 
 export const YOUTUBE_API =
   "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&maxResults=50&chart=mostPopular&regionCode=IN&key=" +
   YOUTUBE_API_KEY;
+
+
+ export const VIDEO_ID_API =  "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id="
+
+ export const HELPER = "&key="  
 
 export const YOUTUBE_SEARCH_API =
   "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";

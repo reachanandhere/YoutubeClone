@@ -63,7 +63,7 @@ const CommentsList = ({ comments }) => {
 
 const Comments = () => {
   return (
-    <div className="my-5 w-9/12 sm:w-full shadow-xl">
+    <div className="my-5 px-4 w-9/12 sm:w-full shadow-xl">
       <h1 className="text-2xl font-bold">Comments</h1>
       <CommentsList comments={commentsData} />
     </div>

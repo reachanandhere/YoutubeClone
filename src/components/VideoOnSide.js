@@ -12,7 +12,7 @@ const VideoOnSide = () => {
     getVideos();
   }, []);
   return (
-    <div className="w-3/12 overflow-y-scroll h-[80vh]">
+    <div className="w-3/12 my-8 overflow-y-scroll h-[80vh]">
       {videos.map((v) => {
         return (
           <div className="flex p-2">
