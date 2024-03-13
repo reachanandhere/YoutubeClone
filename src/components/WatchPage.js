@@ -43,7 +43,7 @@ const WatchPage = () => {
   return (
     <div className="w-full pl-5">
       <div className="flex">
-        <div className="w-9/12   ">
+        <div className="w-9/12 sm:w-full  ">
           <iframe
             className="w-full sm:h-[300px] h-[35vw] sm:w-full"
             src={
@@ -55,7 +55,7 @@ const WatchPage = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
           ></iframe>
-          <div className="flex">
+          <div className="flex  justify-between">
             <div>
             <h1 className="text-3xl font-bold py-2 px-4">
               {video?.snippet?.channelTitle}
@@ -64,7 +64,7 @@ const WatchPage = () => {
               {video?.statistics?.viewCount} views
             </h4>
             </div>
-            <button className="w-48 h-16 my-4 rounded-full bg-red-600 text-white">Subscribe</button>
+            <button className="w-48 h-16 my-4 mx-8 sm:mx-2 rounded-full bg-red-600 text-white">Subscribe</button>
           </div>
         </div>
 
