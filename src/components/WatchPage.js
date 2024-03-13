@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 import Comments from "./Comments";
 import LiveChat from "./LiveChat";
+import VideoOnSide from "./VideoOnSide";
 
 const WatchPage = () => {
   const dispatch = useDispatch();
@@ -37,7 +38,10 @@ const WatchPage = () => {
           <LiveChat />
         </div>
       </div>
-      <Comments />
+      <div className="flex">
+        <Comments />
+        <VideoOnSide />
+      </div>
     </div>
   );
 };
