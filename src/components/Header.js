@@ -50,7 +50,7 @@ const Header = () => {
     <section className="grid grid-flow-col p-4 m-2 shadow-lg">
       <section className="flex col-span-2">
         <img
-          className="h-8 cursor-pointer"
+          className="h-8 cursor-pointer sm:hidden"
           src={HAMBURGER}
           alt="hamburger"
           onClick={toggleMenuHandler}
@@ -63,7 +63,7 @@ const Header = () => {
             <input
               type="text"
               placeholder="Search"
-              class="form-input border border-gray-400 py-2 px-4 bg-white  w-[50%] rounded-xl "
+              class="form-input border border-gray-400 py-1 px-4 bg-white  w-[50%] rounded-xl "
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />

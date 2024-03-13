@@ -5,7 +5,7 @@ import VideoContainer from './VideoContainer'
 const MainContainer = () => {
   
   return (
-    <section className='w-10/12'>
+    <section className='w-10/12 sm:w-full'>
         <ButtonList />
         <VideoContainer />
     </section>

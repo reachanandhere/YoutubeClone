@@ -4,7 +4,7 @@ import { BUTTON_LIST } from '../utils/constants'
 
 const ButtonList = () => {
   return (
-    <section className='flex'>
+    <section className='flex sm:hidden'>
       {
         BUTTON_LIST.map(b=>{
           return  <Button key={b} val={b} />

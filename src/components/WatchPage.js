@@ -22,7 +22,7 @@ const WatchPage = () => {
     <div className="w-full pl-5">
       <div className="flex">
         <iframe
-          className="w-9/12 h-[35vw]"
+          className="w-9/12 sm:w-full h-[35vw] sm:h-[300px]"
           src={
             "https://www.youtube.com/embed/" +
             searchParams.get("v") +
@@ -33,7 +33,7 @@ const WatchPage = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         ></iframe>
-        <div className="w-3/12 mx-2">
+        <div className="w-3/12 mx-2 sm:hidden">
           <LiveChat />
         </div>
       </div>
